@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: TsuyoshiOtabe/otb-portfolio # ここを自分のリポジトリ名に！
+  branch: main
+  # 認証用設定（後ほど OAuth App と連携させる際に調整します）
+  base_url: https://cms-free-gate.herokuapp.com 
+  auth_endpoint: auth
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Post"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
