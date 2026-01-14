@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: TsuyoshiOtabe/otb-portfolio # ここを自分のリポジトリ名に！
   branch: main
   # 認証用設定（後ほど OAuth App と連携させる際に調整します）
